@@ -2,6 +2,7 @@ window.addEventListener('load', () => {
     const form = document.querySelector('#new-task');
     const input = document.querySelector('#new-task-input');
     const list_el = document.querySelector('#tasks');
+    const delete_button = document.querySelector('#delete-all');
 
     form.addEventListener('submit', (e) => {
         e.preventDefault();
@@ -77,4 +78,16 @@ window.addEventListener('load', () => {
             task_actions_el.removeChild(task_completed_el);
         })
     });
+
+    delete_button.addEventListener('click', deleteAll);
+
+    function deleteAll(){
+        console.log('called');
+        const tasks_to_remove = Array.from(list_el.getElementsByClassName('task'));
+        console.log(tasks_to_remove);
+
+        tasks_to_remove.forEach(element => {
+            list_el.removeChild(element);
+          });
+    }
 });

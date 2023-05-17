@@ -2,6 +2,34 @@ html{
     font-family: Arial, Helvetica, sans-serif;
 }
 
+body{
+    max-height: fit-content;
+}
+
+header{
+    display:flex;
+    flex-direction:column;
+    flex-wrap:wrap;
+    align-items:center;
+}
+
+#tasks-header{
+    display:flex;
+    flex-direction:row;
+    align-items: center;
+}
+
+main{
+    margin-left: 20%;
+    display:flex;
+    flex-direction:column;
+    flex-wrap:wrap;
+}
+
+main>section.task-list>h2{
+    margin-top:50px;
+}
+
 form > input[type = "submit"]{
     border:none;
     background: none;
@@ -14,6 +42,22 @@ form > input[class = 'text-default']{
 }
 
 form > input[type = "submit"]:hover{
+    border:none;
+    background-color: grey;
+    color: white;
+}
+
+#delete-all{
+    font-size: x-small;
+    border:none;
+    background: none;
+    height:min-content;
+    align-items:center;
+    padding-top:10px;
+    margin-left:5px;
+}
+
+#delete-all:hover{
     border:none;
     background-color: grey;
     color: white;
